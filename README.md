@@ -14,10 +14,12 @@ Hướng dẫn này cung cấp các bước để khởi động backend server 
 1. Mở terminal và điều hướng đến thư mục dự án.
    ```bash
    cd src/backend
+   copy link thư mục backend ví dụ: cd C:\D\nmcnpm\Test\Esport\src\backend
    ```
 2. Chạy lệnh sau để khởi động backend server:
    ```bash
    node server.js
+   copy link tệp server.js ví dụ: node C:\D\nmcnpm\Test\Esport\src\backend\server.js
    ```
    Lệnh này sẽ khởi chạy server tại `http://localhost:3000`.
 
