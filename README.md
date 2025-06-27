@@ -5,7 +5,7 @@ Hướng dẫn này cung cấp các bước để khởi động backend server 
 ## Yêu Cầu
 
 - Node.js đã được cài đặt trên hệ thống.
-- Chạy thử node -v và npm -v (nếu powershell không được thì chuyển sang command prompt)
+- Chạy thử node -v và npm -v (nếu powershell không được thì thử chuyển sang command prompt)
 
 ## Các Bước Chạy Ứng Dụng
 
