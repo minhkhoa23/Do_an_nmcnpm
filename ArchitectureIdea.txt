@@ -1,5 +1,5 @@
 /tournament-app
-├── index.html            # Trang chính (chạy live server or đây)
+├── index.html            # Trang chính 
 ├── /src
 │   ├── /assets           # Tài nguyên tĩnh
 │   │   └── styles.css
