@@ -50,4 +50,3 @@
 │   │   └── /utils         # Các hàm tiện ích
 │   │       └── fileUtils.js
 ├── README.md
-└── package.json            # Cấu hình dự án tổng (tùy chọn)
