@@ -1,0 +1,53 @@
+/tournament-app
+├── index.html            # Trang chính (chạy live server or đây)
+├── /src
+│   ├── /assets           # Tài nguyên tĩnh
+│   │   └── styles.css
+│   ├── /frontend
+│   │   ├── /js
+│   │   │   ├── /models       # Dữ liệu và logic nghiệp vụ
+│   │   │   │   ├── User.js
+│   │   │   │   ├── Organizer.js
+│   │   │   │   ├── Tournament.js
+│   │   │   │   └── Team.js
+│   │   │   ├── /views        # Giao diện
+│   │   │   │   ├── userView.js
+│   │   │   │   ├── organizerView.js
+│   │   │   │   └── adminView.js
+│   │   │   ├── /controllers  # Logic điều khiển
+│   │   │   │   ├── UserController.js
+│   │   │   │   ├── OrganizerController.js
+│   │   │   │   └── AdminController.js
+│   │   │   ├── api.js        # Tương tác với backend
+│   │   │   ├── lang.js       # Logic xử lý ngôn ngữ
+│   │   │   └── app.js        # Khởi động ứng dụng và gắn sự kiện
+│   │   ├── /lang            # File ngôn ngữ
+│   │   │   ├── en.json
+│   │   │   └── vi.json
+│   │   └── login.html
+│   ├── /backend           # Toàn bộ backend trong một thư mục
+│   │   ├── server.js      # Server chính
+│   │   ├── package.json   # Cấu hình backend
+│   │   ├── /data          # Dữ liệu tĩnh
+│   │   │   ├── users.json
+│   │   │   ├── tournaments.json
+│   │   │   └── teams.json
+│   │   ├── /config        # Cấu hình server
+│   │   │   └── config.js
+│   │   ├── /controllers   # Logic điều khiển backend
+│   │   │   ├── UserController.js
+│   │   │   ├── OrganizerController.js
+│   │   │   └── AdminController.js
+│   │   ├── /models        # Mô hình dữ liệu backend
+│   │   │   ├── User.js
+│   │   │   ├── Organizer.js
+│   │   │   ├── Tournament.js
+│   │   │   └── Team.js
+│   │   ├── /routes        # Định nghĩa API routes
+│   │   │   ├── userRoutes.js
+│   │   │   ├── organizerRoutes.js
+│   │   │   └── adminRoutes.js
+│   │   └── /utils         # Các hàm tiện ích
+│   │       └── fileUtils.js
+├── README.md
+└── package.json            # Cấu hình dự án tổng (tùy chọn)

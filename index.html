@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tournament Manager</title>
+    <link rel="stylesheet" href="./src/assets/styles.css">
+</head>
+<body>
+    <header>
+        <h1 id="title">Tournament Manager</h1>
+        <nav>
+            <input type="text" id="searchBar" placeholder="Search tournaments...">
+            <button id="loginBtn" onclick="window.location.href='login.html'">Login</button>
+            <button id="registerBtn">Register</button>
+            <button id="createTournamentBtn">Create Tournament</button>
+            <button id="toggleDarkMode">Toggle Dark Mode</button>
+            <select id="languageSelect">
+                <option value="en">English</option>
+                <option value="vi">Tiếng Việt</option>
+            </select>
+        </nav>
+    </header>
+    <main id="content"></main>
+    <script src="./src/frontend/js/api.js"></script>
+    <script src="./src/frontend/js/models/User.js"></script>
+    <script src="./src/frontend/js/models/Organizer.js"></script>
+    <script src="./src/frontend/js/models/Tournament.js"></script>
+    <script src="./src/frontend/js/models/Team.js"></script>
+    <script src="./src/frontend/js/views/userView.js"></script>
+    <script src="./src/frontend/js/views/organizerView.js"></script>
+    <script src="./src/frontend/js/views/adminView.js"></script>
+    <script src="./src/frontend/js/controllers/UserController.js"></script>
+    <script src="./src/frontend/js/controllers/OrganizerController.js"></script>
+    <script src="./src/frontend/js/controllers/AdminController.js"></script>
+    <script src="./src/frontend/js/lang.js"></script>
+    <script src="./src/frontend/js/app.js"></script>
+</body>
+</html>
