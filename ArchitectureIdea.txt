@@ -14,13 +14,14 @@
 │   │   │   │   ├── userView.js
 │   │   │   │   ├── organizerView.js
 │   │   │   │   └── adminView.js
+│   │   │   │   └── guestView.js
 │   │   │   ├── /controllers  # Logic điều khiển
 │   │   │   │   ├── UserController.js
 │   │   │   │   ├── OrganizerController.js
 │   │   │   │   └── AdminController.js
+│   │   │   │   └── GuestController.js
 │   │   │   ├── api.js        # Tương tác với backend
 │   │   │   ├── lang.js       # Logic xử lý ngôn ngữ
-│   │   │   └── app.js        # Khởi động ứng dụng và gắn sự kiện
 │   │   ├── /lang            # File ngôn ngữ
 │   │   │   ├── en.json
 │   │   │   └── vi.json
