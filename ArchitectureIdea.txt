@@ -2,7 +2,17 @@
 ├── index.html            # Trang chính 
 ├── /src
 │   ├── /assets           # Tài nguyên tĩnh
-│   │   └── styles.css
+│   │   └── /styles
+│   │   │       ├── base.css             # Reset, fonts, root variables (chung toàn hệ thống)
+│   │   │       ├── layout.css           # Flex/grid layout, container, spacing
+│   │   │       ├── components.css       # Button, input, card, modal, etc.
+│   │   │       ├── theme.css            # Dark/light theme (nếu có)
+│   │   │       ├── guest.css            # Giao diện dành riêng cho guest
+│   │   │       ├── user.css             # Giao diện dành riêng cho user
+│   │   │       ├── organizer.css        # Organizer dashboard
+│   │   │       ├── admin.css            # Admin panel
+│   │   │       └── responsive.css       # Media queries chung (nếu có)
+│   │   └── /image                   #chứa ảnh                
 │   ├── /frontend
 │   │   ├── /js
 │   │   │   ├── /models       # Dữ liệu và logic nghiệp vụ
