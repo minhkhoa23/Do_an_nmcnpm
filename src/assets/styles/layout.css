@@ -1,24 +1,70 @@
-header {
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    text-align: center;
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
 }
 
-nav input,
-nav button,
-nav select {
-    margin: 0 10px;
-    padding: 5px 10px;
+#content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-#content,
-#loginContainer {
-    padding: 20px;
-    text-align: center;
+.top-section {
+  height: 10%;
+  background-color: hsla(50, 33%, 25%, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
 }
 
-#loginContainer input {
-    margin: 10px;
-    padding: 5px;
+.middle-section{
+  height: 70%;
+  background-color: white;
+}
+
+.bottom-section {
+  height: 20%;
+  background-color: hsla(50, 33%, 25%, 0.75);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #ccc;
+  font-size: 12px;
+  padding: 20px 40px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* Đường kẻ ngang ở đầu footer */
+.bottom-section::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #444;
+}
+
+
+/* Đường kẻ dọc phân cách giữa các phần */
+.contact::after, .info-links::after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  bottom: 20px;
+  width: 1px;
+  background-color: #444;
+}
+
+/* Đặt đường kẻ dọc bên phải của phần liên hệ */
+.contact::after {
+  right: 0;
+}
+
+/* Đặt đường kẻ dọc bên phải của phần thông tin liên kết */
+.info-links::after {
+  right: 0;
 }

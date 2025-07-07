@@ -1,27 +1,41 @@
-body.dark-mode {
-  background-color: #1a1a1a;
-  color: #ffffff;
-}
+/* Style cho chế độ tối */
+    body.dark-mode {
+      background-color: #121212;
+      color: #fff;
+    }
 
-body.dark-mode .guest-header {
-  background-color: #333;
-  color: #fff;
-}
+    /* Style cho top-section trong chế độ tối */
+    body.dark-mode .top-section {
+      background-color: #222;
+    }
 
-body.dark-mode .guest-nav input,
-body.dark-mode .guest-nav button,
-body.dark-mode .guest-nav select,
-body.dark-mode .login-section input {
-  background-color: #333;
-  color: #fff;
-  border-color: #888;
-}
+    /* Style cho thanh tìm kiếm trong chế độ tối */
+    body.dark-mode .search-bar {
+      background-color: #333;
+      color: white;
+    }
 
-body.dark-mode .btn {
-  background-color: #555;
-  color: #fff;
-}
+    /* Style cho footer trong chế độ tối */
+    body.dark-mode .bottom-section {
+      background-color: #222;
+      color: #ddd;
+    }
 
-body.dark-mode .btn:hover {
-  background-color: #888;
-}
+    /* Style cho menu thả xuống và submenu trong chế độ tối */
+    body.dark-mode .dropdown-menu,
+    body.dark-mode .language-submenu {
+      background-color: #333;
+      color: white;
+    }
+
+    /* Hiệu ứng hover trong chế độ tối */
+    body.dark-mode .mode-title:hover,
+    body.dark-mode .language-title:hover,
+    body.dark-mode .language-submenu div:hover {
+      background-color: #555 !important;
+    }
+
+    /* Style cho mục Home trong chế độ tối */
+    body.dark-mode .home {
+      color: #ddd;
+    }

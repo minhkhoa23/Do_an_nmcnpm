@@ -1,31 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tournament Manager</title>
-
-  <!-- ✅ Gắn CSS -->
-  <link rel="stylesheet" href="./src/assets/styles/base.css" />
-  <link rel="stylesheet" href="./src/assets/styles/theme.css" />
-  <link rel="stylesheet" href="./src/assets/styles/components.css" />
-  <link rel="stylesheet" href="./src/assets/styles/layout.css" />
-  <link rel="stylesheet" href="./src/assets/styles/guest.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./src/assets/styles/base.css">
+  <link rel="stylesheet" href="./src/assets/styles/layout.css">
+  <link rel="stylesheet" href="./src/assets/styles/theme.css">
+  <link rel="stylesheet" href="./src/assets/styles/components.css">
+  <title>Tourament</title>
 </head>
 <body>
-  <main id="content"></main>
-
-  <!-- ✅ Load GuestController và render -->
-  <script type="module">
-    import { renderGuestView } from './src/frontend/js/views/guestView.js';
-    import GuestController from './src/frontend/js/controllers/GuestController.js';
-
-    const guestController = new GuestController();
-    window.guestController = guestController;
-
-    document.addEventListener('DOMContentLoaded', () => {
-      guestController.renderGuestView();
-    });
-  </script>
+  <div id = 'content'></div>
 </body>
+<script type ="module">
+  import GuestController from './src/frontend/js/controllers/GuestController.js';
+  const Guest = new GuestController;
+  Guest.Show()
+</script>
 </html>
