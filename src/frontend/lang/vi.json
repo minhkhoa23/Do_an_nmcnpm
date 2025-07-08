@@ -1,10 +1,17 @@
 {
-    "title": "Quản lý Giải đấu",
-    "loginTitle": "Đăng nhập",
-    "registerLink": "Chưa có tài khoản? <a href='index.html'>Đăng ký</a>",
-    "searchPlaceholder": "Tìm kiếm giải đấu...",
-    "loginButton": "Đăng nhập",
-    "registerButton": "Đăng ký",
-    "createTournamentButton": "Tạo Giải đấu",
-    "toggleDarkMode": "Chuyển chế độ tối"
+  "home": "Trang chủ",
+  "searchPlaceholder": "Tìm kiếm",
+  "support": "Hỗ trợ",
+  "info": "Thông tin",
+  "toggleDarkMode": "Chuyển chế độ tối",
+  "toggleLanguage": "Đổi ngôn ngữ",
+  "languageVietnamese": "Tiếng Việt",
+  "languageEnglish": "Tiếng Anh",
+  "loginButton": "Đăng nhập",
+  "registerButton": "Đăng ký",
+  "contactTitle": "Liên hệ với chúng tôi",
+  "appInfo": "Thông tin ứng dụng",
+  "privacyPolicy": "Chính sách bảo mật",
+  "termsOfUse": "Điều khoản sử dụng",
+  "copyright": "2025 Mọi quyền được bảo lưu"
 }
