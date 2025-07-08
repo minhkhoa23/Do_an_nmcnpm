@@ -1,36 +1,70 @@
 const express = require('express');
-const bodyParser = require('body-parser');
-const path = require('path');
+const mongoose = require('mongoose');
+const http = require('http');
+const socketIo = require('socket.io');
 const config = require('./config/config');
-const userRoutes = require('./routes/userRoutes');
-const organizerRoutes = require('./routes/organizerRoutes');
-const adminRoutes = require('./routes/adminRoutes');
-const fileUtils = require('./utils/fileUtils');
+const matchRoutes = require('./routes/matchRoutes');
+const tournamentRoutes = require('./routes/tournamentRoutes');
+const matchSocket = require('./utils/matchSocket');
+const seedDatabase = require('./utils/seedDatabase');
+require('dotenv').config();
 
 const app = express();
-const port = config.port;
+const server = http.createServer(app);
+const io = socketIo(server, {
+  cors: config.socketCors
+});
 
-// Phục vụ static cho toàn bộ frontend (bao gồm login.html và js)
-app.use(express.static(path.join(__dirname, '../frontend')));
+app.use(express.json());
 
-// Phục vụ file gốc index.html nếu cần
-app.use(express.static(path.join(__dirname, '../../')));
+// Middleware
+app.use((req, res, next) => {
+  req.io = io;
+  next();
+});
 
-app.use(bodyParser.json());
+// Add Socket.IO to request object
+app.set('io', io);
 
-// Load data từ file JSON
-const dataDir = './data/';
-const { readData, writeData } = fileUtils;
-let users = readData(path.join(__dirname, dataDir, 'users.json'));
-let tournaments = readData(path.join(__dirname, dataDir, 'tournaments.json'));
-let teams = readData(path.join(__dirname, dataDir, 'teams.json'));
+// Routes
+app.use('/api/tournaments', tournamentRoutes);
+app.use('/api/matches', matchRoutes);
 
-// API routing
-app.use('/api', userRoutes);
-app.use('/api', organizerRoutes);
-app.use('/api', adminRoutes);
+// MongoDB Connection and Seeding
+mongoose.set('strictQuery', true);
 
-// Khởi động server
-app.listen(port, () =>
-    console.log(`Server running on http://localhost:${port}`)
-);
+// Chỉ kết nối nếu không phải môi trường test
+if (process.env.NODE_ENV !== 'test') {
+  mongoose.connect(process.env.MONGO_URI || config.mongoURI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+  })
+    .then(async () => {
+      console.log('Connected to MongoDB');
+      if (process.env.SEED_DB === 'true') {
+        await seedDatabase();
+      }
+    })
+    .catch(err => console.error('MongoDB connection error:', err));
+}
+
+// Initialize Socket.IO
+matchSocket(io);
+
+// Start Server only if not in test environment
+if (process.env.NODE_ENV !== 'test') {
+  mongoose.set('strictQuery', true);
+  mongoose.connect(process.env.MONGO_URI || config.mongoURI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+  })
+    .then(async () => {
+      console.log('Connected to MongoDB');
+      if (process.env.SEED_DB === 'true') {
+        await seedDatabase();
+      }
+    })
+    .catch(err => console.error('MongoDB connection error:', err));
+}
+
+module.exports = { app, server };

@@ -1,10 +1,17 @@
 {
-    "title": "Tournament Manager",
-    "loginTitle": "Login",
-    "registerLink": "Don't have an account? <a href='index.html'>Register</a>",
-    "searchPlaceholder": "Search tournaments...",
-    "loginButton": "Login",
-    "registerButton": "Register",
-    "createTournamentButton": "Create Tournament",
-    "toggleDarkMode": "Toggle Dark Mode"
+  "home": "Home",
+  "searchPlaceholder": "Search",
+  "support": "Support",
+  "info": "Info",
+  "toggleDarkMode": "Toggle Dark Mode",
+  "toggleLanguage": "Change Language",
+  "languageVietnamese": "Vietnamese",
+  "languageEnglish": "English",
+  "loginButton": "Login",
+  "registerButton": "Register",
+  "contactTitle": "Contact Us",
+  "appInfo": "App Information",
+  "privacyPolicy": "Privacy Policy   ",
+  "termsOfUse": "Terms of Use     ",
+  "copyright": "2025 All rights reserved"
 }
