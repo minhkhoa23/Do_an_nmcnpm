@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "64f000000000000000003001",
+    "tournamentId": "64f000000000000000001001",
+    "title": "Spring Cup sắp bắt đầu!",
+    "content": "Hãy sẵn sàng cho giải mùa xuân...",
+    "images": ["http://example.com/news/spring1.jpg"],
+    "authorId": "64f000000000000000000002",
+    "publishedAt": "2025-02-25"
+  },
+  {
+    "_id": "64f000000000000000003002",
+    "tournamentId": "64f000000000000000001002",
+    "title": "Summer Cup khai mạc ngày 15/6",
+    "content": "Nhiều đội mạnh sẽ tranh tài...",
+    "images": ["http://example.com/news/summer1.jpg"],
+    "authorId": "64f000000000000000000002",
+    "publishedAt": "2025-06-10"
+  }
+]

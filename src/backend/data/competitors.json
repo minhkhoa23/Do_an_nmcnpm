@@ -1,0 +1,26 @@
+[
+  {
+    "_id": "64f000000000000000002001",
+    "name": "Team Alpha",
+    "logoUrl": "http://example.com/logos/alpha.png",
+    "description": "Top seed",
+    "members": [
+      { "name": "Alice", "position": "Leader" },
+      { "name": "Bob", "position": "Support" }
+    ],
+    "tier": "S",
+    "createdAt": "2025-06-01"
+  },
+  {
+    "_id": "64f000000000000000002002",
+    "name": "Team Bravo",
+    "logoUrl": "http://example.com/logos/bravo.png",
+    "description": "Old rivals",
+    "members": [
+      { "name": "Charlie", "position": "Sniper" },
+      { "name": "Dana", "position": "Scout" }
+    ],
+    "tier": "A",
+    "createdAt": "2025-06-02"
+  }
+]
