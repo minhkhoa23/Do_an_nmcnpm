@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "64f000000000000000004001",
+    "tournamentId": "64f000000000000000001001",
+    "matchId": "64f000000000000000005001",
+    "title": "Highlight trận khai mạc",
+    "videoUrl": "https://www.youtube.com/watch?v=vid1",
+    "description": "Pha kết liễu mãn nhãn",
+    "createdAt": "2025-03-01T20:00:00Z"
+  },
+  {
+    "_id": "64f000000000000000004002",
+    "tournamentId": "64f000000000000000001002",
+    "matchId": "64f000000000000000005002",
+    "title": "Highlight bán kết Summer",
+    "videoUrl": "https://www.youtube.com/watch?v=vid2",
+    "description": "Pha solo cực căng",
+    "createdAt": "2025-06-20T18:00:00Z"
+  }
+]

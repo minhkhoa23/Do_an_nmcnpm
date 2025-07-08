@@ -1,9 +1,37 @@
-class User {
-    constructor(id, name, email) {
-        this.id = id;
-        this.name = name;
-        this.email = email;
-    }
-}
+const mongoose = require('mongoose');
 
-module.exports = User;
+const userSchema = new mongoose.Schema({
+  _id: {
+    type: mongoose.Schema.Types.ObjectId,
+    default: () => new mongoose.Types.ObjectId()
+  },
+  email: {
+    type: String,
+    required: [true, 'Email is required'],
+    unique: true,
+    lowercase: true,
+    trim: true,
+    match: [/.+\@.+\..+/, 'Please enter a valid email address']
+  },
+  passwordHash: {
+    type: String,
+    required: [true, 'Password hash is required']
+  },
+  role: {
+    type: String,
+    enum: ['user', 'organizer', 'admin'],
+    default: 'user'
+  },
+  fullName: {
+    type: String,
+    trim: true
+  },
+  avatarUrl: {
+    type: String,
+    trim: true
+  }
+}, {
+  timestamps: true // Tự động tạo createdAt và updatedAt
+});
+
+module.exports = mongoose.model('User', userSchema);
