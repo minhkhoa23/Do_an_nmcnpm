@@ -1,25 +1,407 @@
-/* Buttons */
-.btn {
-    background-color: #00FFCC;
-    color: #1A1A1A;
-    border: none;
-    padding: 10px 20px;
-    margin: 5px;
+/* Style cho thanh tìm kiếm */
+.search-bar {
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px 15px;
+    display: flex;
+    align-items: center;
+    width: 30%;
+    max-width: 300px;
+    flex-shrink: 1;
+}
+
+/* Style cho input trong thanh tìm kiếm */
+.search-bar input {
+border: none;
+outline: none;
+background: transparent;
+width: 100%;
+}
+
+/* Style cho các biểu tượng điều hướng */
+.nav-icons {
+display: flex;
+align-items: center;
+flex-shrink: 0;
+max-width: 60%;
+}
+
+/* Style cho các phần tử con trong nav-icons */
+.nav-icons div {
+    margin: 0 10px;
+    color: white;
+    font-size: 14px;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+}
+
+/* Style cho biểu tượng menu */
+.nav-icons .menu-icon {
+font-size: 16px;
+}
+
+/* Style cho mục Home */
+.home {
+display: flex;
+align-items: center;
+color: white;
+font-size: 14px;
+margin: 0 10px 0 5px;
+}
+
+
+/* Style cho biểu tượng ngôi nhà */
+.home-icon {
+font-size: 16px;
+margin-right: 5px;
+}
+
+/* Style cho wrapper của menu */
+.menu-wrapper {
+    position: relative;
+}
+
+/* Style cho menu thả xuống */
+.dropdown-menu {
+position: absolute;
+top: 25px;
+left: 0;
+background-color: rgb(31, 100, 152);
+color: black;
+border: 1px solid #ccc;
+border-radius: 5px;
+display: none;
+flex-direction: column;
+min-width: 150px;
+z-index: 10;
+box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+transition: transform 0.3s ease, opacity 0.3s ease;
+opacity: 0;
+transform: scale(0.9);
+box-sizing: border-box;
+padding: 0;
+align-items: flex-start;
+}
+
+/* Hiển thị menu khi hover vào menu-wrapper */
+.menu-wrapper:hover .dropdown-menu {
+    display: flex;
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* Style cho wrapper của chế độ và ngôn ngữ */
+.mode-wrapper, .language-wrapper {
+    position: relative;
+}
+
+/* Style cho tiêu đề chế độ và ngôn ngữ */
+.mode-title, .language-title {
+    text-align: left;
+    padding: 8px 12px;
+    cursor: pointer;
+    white-space: nowrap;
+    box-sizing: border-box;
+    font-size: 12px;
+    width: 100%;
+}
+
+/* Hiệu ứng hover cho tiêu đề chế độ và ngôn ngữ */
+.mode-title:hover, .language-title:hover {
+    background-color: #eee;
+}
+
+/* Style cho submenu ngôn ngữ */
+.language-submenu {
+    position: absolute;
+    top: -9%;
+    left: 100%;
+    background-color: rgb(31, 100, 152);
+    color: black;
+    border: 1px solid #ccc;
     border-radius: 5px;
+    display: none;
+    flex-direction: column;
+    min-width: 100px;
+    z-index: 11;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    transform: scale(0.9);
+    box-sizing: border-box;
+    padding: 0;
+    align-items: flex-start;
+}
+
+/* Hiển thị submenu khi hover vào language-wrapper */
+.language-wrapper:hover .language-submenu {
+    display: flex;
+    opacity: 1;
+    transform: scale(1.1);
+    transition: transform 0.3s ease, opacity 0.3s ease, display 0s ease 0.2s;
+}
+
+/* Style cho các mục trong submenu ngôn ngữ */
+.language-submenu div {
+    padding: 6px 12px;
+    cursor: pointer;
+    text-align: left;
+    white-space: nowrap;
+    background-color: transparent;
+    box-sizing: border-box;
+    font-size: 12px;
+    width: 100%;
+}
+
+/* Hiệu ứng hover cho các mục trong submenu ngôn ngữ */
+.language-submenu div:hover {
+    background-color: #eee;
+}
+
+/* Style cho các mục hỗ trợ và thông tin trong nav-icons */
+.nav-icons .support, .nav-icons .info {
+    display: flex;
+    align-items: center;
+}
+
+/* Style cho biểu tượng trước mục hỗ trợ và thông tin */
+.nav-icons .support::before, .nav-icons .info::before {
+    content: '';
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: white;
+    margin-right: 5px;
+    text-align: center;
+    line-height: 15px;
+    color: black;
+}
+
+/* Biểu tượng '?' cho mục hỗ trợ */
+.nav-icons .support::before {
+    content: '?';
+}
+
+/* Biểu tượng '!' cho mục thông tin */
+.nav-icons .info::before {
+    content: '!';
+}
+
+/* Style cho các nút đăng nhập và đăng ký */
+.auth-buttons {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+/* Style chung cho các nút trong auth-buttons */
+.auth-buttons button {
+    margin-left: 10px;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+/* Style cho nút đăng ký */
+.auth-buttons .register {
+    background-color: red;
+    color: white;
+}
+
+/* Style cho nút đăng nhập */
+.auth-buttons .login {
+    background-color: blue;
+    color: white;
+}
+
+
+/* Style chung cho các phần liên hệ, thông tin liên kết và biểu tượng bổ sung */
+.contact, .info-links, .extra-icons {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+/* Style cho phần liên hệ */
+.contact {
+    position: relative;
+    padding-right: 20px;
+}
+
+/* Style cho phần thông tin liên kết */
+.info-links {
+    position: relative;
+    padding: 0 20px;
+}
+
+/* Style cho phần biểu tượng bổ sung */
+.extra-icons {
+    padding-left: 20px;
+}
+
+/* Style cho tiêu đề trong phần liên hệ */
+.contact .title {
+    margin-bottom: 10px;
+}
+
+/* Style cho các biểu tượng mạng xã hội */
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+/* Style cho hình ảnh biểu tượng */
+.icon-img {
+    width: 24px;
+    height: 24px;
+    filter: invert(90%);
+}
+
+/* Style cho các mục thông tin trong info-links */
+.info-links .info-item {
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    white-space: pre
+}
+
+/* Biểu tượng '!' trước mỗi mục thông tin */
+.info-links .info-item::before {
+    content: "!";
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #ccc;
+    color: black;
+    text-align: center;
+    line-height: 18px;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+/* Style cho thông tin bản quyền */
+.copyright {
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+/* Style cho hàng biểu tượng trong extra-icons */
+.icon-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+/* Style cho biểu tượng placeholder */
+.placeholder-icon {
+    width: 60px;
+    height: 60px;
+    background-color: #ddd;
+    border-radius: 10px;
+}
+
+/* Style cho các nút phóng to/thu nhỏ */
+.zoom-buttons {
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+/* Style cho các nút trong zoom-buttons */
+.zoom-buttons div {
+    font-size: 14px;
     cursor: pointer;
 }
 
-.btn:hover {
-    background-color: #00B894;
+/* Style cho nút phóng to, phóng nhỏ */
+.magnifier {
+    width: 24px;
+    height: 24px;
+    border: 2px solid white;
+    border-radius: 50%;
+    position: relative;
+    background: transparent;
 }
 
-/* Inputs */
-input[type="text"],
-input[type="email"],
-select {
+/* Hiệu ứng dấu cộng cho nút phóng to */
+.zoom-in::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    background: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.zoom-in::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 10px;
+    background: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Hiệu ứng dấu trừ cho nút thu nhỏ */
+.zoom-out::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    background: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .nav-icons {
+    max-width: 50%;
+    }
+    .search-bar {
+    width: 25%;
+    max-width: 200px;
+    }
+    .auth-buttons button {
     padding: 5px 10px;
-    border: 1px solid #00FFCC;
-    border-radius: 5px;
-    background-color: #1A1A1A;
-    color: #D3D3D3;
+    font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-icons {
+    flex-wrap: wrap;
+    max-width: 100%;
+    }
+    .search-bar {
+    width: 100%;
+    max-width: 150px;
+    }
+    .auth-buttons {
+    flex-direction: column;
+    gap: 5px;
+    }
+    .auth-buttons button {
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
+    }
 }
