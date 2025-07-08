@@ -1,3 +1,82 @@
 [
-    { "id": "1", "name": "John Doe", "email": "john@example.com" }
+  {
+    "_id": "64f000000000000000000001",
+    "email": "admin@example.com",
+    "passwordHash": "hashed_admin",
+    "role": "admin",
+    "fullName": "System Admin",
+    "avatarUrl": "http://example.com/avatars/admin.png"
+  },
+  {
+    "_id": "64f000000000000000000002",
+    "email": "organizer1@example.com",
+    "passwordHash": "hashed_org1",
+    "role": "organizer",
+    "fullName": "Organizer One",
+    "avatarUrl": "http://example.com/avatars/organizer1.png"
+  },
+  {
+    "_id": "64f000000000000000000003",
+    "email": "organizer2@example.com",
+    "passwordHash": "hashed_org2",
+    "role": "organizer",
+    "fullName": "Organizer Two",
+    "avatarUrl": "http://example.com/avatars/organizer2.png"
+  },
+  {
+    "_id": "64f000000000000000000004",
+    "email": "user1@example.com",
+    "passwordHash": "hashed_user1",
+    "role": "user",
+    "fullName": "User One",
+    "avatarUrl": "http://example.com/avatars/user1.png"
+  },
+  {
+    "_id": "64f000000000000000000005",
+    "email": "user2@example.com",
+    "passwordHash": "hashed_user2",
+    "role": "user",
+    "fullName": "User Two",
+    "avatarUrl": "http://example.com/avatars/user2.png"
+  },
+  {
+    "_id": "64f000000000000000000006",
+    "email": "user3@example.com",
+    "passwordHash": "hashed_user3",
+    "role": "user",
+    "fullName": "User Three",
+    "avatarUrl": "http://example.com/avatars/user3.png"
+  },
+  {
+    "_id": "64f000000000000000000007",
+    "email": "user4@example.com",
+    "passwordHash": "hashed_user4",
+    "role": "user",
+    "fullName": "User Four",
+    "avatarUrl": "http://example.com/avatars/user4.png"
+  },
+  {
+    "_id": "64f000000000000000000008",
+    "email": "user5@example.com",
+    "passwordHash": "hashed_user5",
+    "role": "user",
+    "fullName": "User Five",
+    "avatarUrl": "http://example.com/avatars/user5.png"
+  },
+  {
+    "_id": "64f000000000000000000009",
+    "email": "user6@example.com",
+    "passwordHash": "hashed_user6",
+    "role": "user",
+    "fullName": "User Six",
+    "avatarUrl": "http://example.com/avatars/user6.png"
+  },
+  {
+    "_id": "64f000000000000000000010",
+    "email": "user7@example.com",
+    "passwordHash": "hashed_user7",
+    "role": "user",
+    "fullName": "User Seven",
+    "avatarUrl": "http://example.com/avatars/user7.png"
+  }
 ]

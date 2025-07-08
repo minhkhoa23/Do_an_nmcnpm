@@ -1,3 +1,67 @@
 [
-    { "id": "1", "name": "Summer 2025", "format": "single", "teams": [], "sponsors": [] }
+  {
+    "_id": "64f000000000000000001001",
+    "name": "Spring Cup",
+    "format": "round-robin",
+    "description": "Tournament in spring",
+    "organizerId": "64f000000000000000000002",
+    "teams": [],
+    "avatarUrl": "http://example.com/tournaments/spring.jpg",
+    "sponsors": [],
+    "startDate": "2025-03-01",
+    "endDate": "2025-03-10",
+    "status": "upcoming"
+  },
+  {
+    "_id": "64f000000000000000001002",
+    "name": "Summer Cup",
+    "format": "single",
+    "description": "Tournament in summer",
+    "organizerId": "64f000000000000000000002",
+    "teams": [],
+    "avatarUrl": "http://example.com/tournaments/summer.jpg",
+    "sponsors": [],
+    "startDate": "2025-06-15",
+    "endDate": "2025-07-01",
+    "status": "upcoming"
+  },
+  {
+    "_id": "64f000000000000000001003",
+    "name": "Autumn Clash",
+    "format": "round-robin",
+    "description": "Autumn event",
+    "organizerId": "64f000000000000000000003",
+    "teams": [],
+    "avatarUrl": "http://example.com/tournaments/autumn.jpg",
+    "sponsors": [],
+    "startDate": "2025-09-10",
+    "endDate": "2025-09-25",
+    "status": "upcoming"
+  },
+  {
+    "_id": "64f000000000000000001004",
+    "name": "Winter Showdown",
+    "format": "single",
+    "description": "Winter event",
+    "organizerId": "64f000000000000000000003",
+    "teams": [],
+    "avatarUrl": "http://example.com/tournaments/winter.jpg",
+    "sponsors": [],
+    "startDate": "2025-12-01",
+    "endDate": "2025-12-15",
+    "status": "upcoming"
+  },
+  {
+    "_id": "64f000000000000000001005",
+    "name": "New Year Kickoff",
+    "format": "round-robin",
+    "description": "Start of year tournament",
+    "organizerId": "64f000000000000000000002",
+    "teams": [],
+    "avatarUrl": "http://example.com/tournaments/newyear.jpg",
+    "sponsors": [],
+    "startDate": "2026-01-01",
+    "endDate": "2026-01-10",
+    "status": "upcoming"
+  }
 ]
